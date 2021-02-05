@@ -3,7 +3,7 @@ version: 1
 disable_existing_loggers: False
 formatters:
     simple:
-        format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        format: "%(asctime)s - %(levelname)s - %(module)s:%(funcName)s - %(message)s"
 
 handlers:
     console:
@@ -38,4 +38,5 @@ loggers:
 
 root:
     level: INFO
-    handlers: [console, info_file_handler, error_file_handler]
+    # handlers: [console, info_file_handler, error_file_handler]
+    handlers: [console]
